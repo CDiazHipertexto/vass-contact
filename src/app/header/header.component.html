@@ -1,0 +1,47 @@
+<script src="../../../../../Downloads/kessler-charters-master/assets/js/shared.js"></script>
+<script src="header.component.ts"></script>
+<header id="header" class="header" [ngClass]="{'down up' : isSticky, '': !isSticky}">
+  <div class="container">
+    <div class="flex-box">
+      <div class="header__logo">
+        <a class="logo navbar-brand js-scroll-trigger" href="#">
+          <app-logo></app-logo>
+        </a>
+      </div>
+      <div class="header__menu" [ngClass]="status ? 'open' : ''" >
+        <nav id="primary-nav" class="privary-navigation"  [ngClass]="{'active': activeToggle, '': !activeToggle}" role="navigation" aria-label="Primary">
+          <ul id="privary-navigation" class="privary-navigation__list" [ngClass]="{'s-hovered': isHovering, '': !isHovering}">
+            <li *ngFor="let itemMenuu of itemsMenuu" [ngClass]="itemMenuu" class="privary-navigation__item primary-nav-2">
+              <a (mouseover)="isHovering=true" (mouseout)="isHovering=false" [ngClass]="{'hovering': isHovering, '': !isHovering}" aria-haspopup="true" aria-label="" href="#" class="link-hover">
+                {{itemMenuu.item}}
+                <i *ngIf="itemMenuu.subItems" class="fa-solid fa-caret-right"></i>
+              </a>
+              <ul *ngIf="itemMenuu.subItems" class="submenu privary-navigation__submenu" [ngClass]="{'sHovered': isHoveringSub, '': !isHoveringSub}" aria-hidden="true">
+                <li *ngFor="let subItem of itemMenuu.subItems"  class="privary-navigation__item primary-nav-3">
+                  <a (mouseover)="isHoveringSub=true" (mouseout)="isHoveringSub=false" [ngClass]="{'hovering': isHoveringSub, '': !isHoveringSub}"  href="#" class="isMobile" aria-label="">
+                    {{subItem.item}}
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__search">
+        <button class="button-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+      <div class="header__burger">
+        <button id="menu-cta-js" class="menu-cta-js" (click)="clickEvent()" [ngClass]="status ? 'open' : ''" type="button">
+          <div class="lineas">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+

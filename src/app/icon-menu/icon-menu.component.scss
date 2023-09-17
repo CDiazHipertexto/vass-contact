@@ -1,0 +1,49 @@
+#menu {
+  cursor: pointer;
+  width: 28px;
+  transition: 0.3s all ease;
+  margin-left: 5px;
+  transform: translateY(-10%) rotate(0);
+  position: relative;
+  .st0 {
+    display: none;
+  }
+  .st1 {
+    fill: #FFFFFF;
+    transform-origin: 4px 0;
+    transition: transform .5s cubic-bezier(0.77, 0.2, 0.05, 1),background .5s cubic-bezier(0.77, 0.2, 0.05, 1),opacity .55s ease;
+    &:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+  }
+}
+.active {
+  .st1 {
+    opacity: 1;
+    transform: rotate(42deg) translate(1px, -15px);
+    &:nth-last-child(2) {
+      transform: rotate(-42deg) translate(0px, 10px) !important;
+    }
+    &:nth-last-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+  }
+}
+.sticky-nav {
+  transition: .7s;
+  padding: 0;
+  #menu {
+    .st1 {
+      transition: 1s;
+      fill: #4d4d4d !important;
+    }
+  }
+}
+.menu li:hover {
+  a {
+    #menu {
+      transform: translateY(-10%) rotate(90deg);
+    }
+  }
+}

@@ -1,0 +1,216 @@
+.wrapp-controls {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .swiper-pagination {
+    position: relative;
+    width: auto;
+    bottom: auto;
+    top: auto;
+    left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &-bullet {
+      background-color: transparent;
+      opacity: 1;
+      position: relative;
+      width: 26px;
+			height: 26px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:after {
+        content: "";
+        display: block;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: currentColor;
+        position: absolute;
+    }    
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      border-radius: 50%;
+      // background-color: $third_color;
+    }
+      &-active {
+        background-color: transparent;
+        border: 1px solid currentColor;
+      }
+    }
+  }
+
+  .progress-block {
+    display: flex;
+
+    .count-line {
+      position: relative;
+      display: flex;
+      width: 35px;
+      margin: 0 1rem;
+      background: transparent;
+      align-items: center;
+
+      &:before {
+          content: '';
+          width: 100%;
+          display: block;
+          background-color: $primary_color;
+          height: 1px;
+          transition: all 4.6s ease-in-out;
+          position: relative;
+          top: 1px;
+      }
+
+      &::after {
+          content: '';
+          height: 1px;
+          display: block;
+      }
+    }
+
+    .autoplay-progress {
+      display: none;
+    }
+  }
+}
+
+
+.sw-arrows {
+  display: flex;
+  align-items: center;
+  column-gap: em(5px);
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  justify-content: space-between;
+  z-index: 9;
+  left: 0;
+  right: 0;
+  
+  &--arrow {
+    position: absolute;
+    display: flex;
+    align-items: center;
+
+    &.arrow {
+      &--prev {
+        button {
+          svg {
+            
+          }
+        }
+      }
+      &--next {
+        right: 0;
+
+        button {
+          svg {
+            
+          }
+        }
+      }
+    }
+
+    &.arrow--prev,
+    &.arrow--next {
+      margin: 0;
+
+      svg {
+        &.arrow {
+          fill: $third_color;
+        }
+
+        &.circle {
+          margin: 0;
+          overflow: visible;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          transition-duration: 0.3s;
+          circle {
+            stroke-dasharray: 500;
+            stroke-dashoffset: 500;
+            stroke-width: 3;
+            transition: all 1.2s ease;
+          }
+        }
+      }
+
+      img {
+        width: 30px;
+      }
+    }
+  }
+
+  .sw-arrow {
+    --swiper-navigation-size: 82px;
+    position: relative;
+    inset: unset;
+    width: var(--swiper-navigation-size);
+    height: var(--swiper-navigation-size);
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    color: $third_color;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    appearance: none;
+    will-change: auto;
+    transition: color 300ms;
+    border: 1px solid $third_color;
+    border-radius: 50%;
+
+    
+    &.sw-button-prev,
+    &.sw-button-next {
+      &::after {
+        content: unset;
+      }
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0.5;
+    }
+
+    &:hover {
+      color: $secondary_color;
+
+      svg.circle circle {
+        stroke-dashoffset: 0;
+      }
+
+
+    }
+  }
+
+  @include media($ipadPortrait + 24) {
+    .sw-arrow {
+      --swiper-navigation-size: 40px;
+      
+      svg {
+        width: 18px;
+      }
+
+      circle {
+        r: 20;
+      }
+    }
+  }
+}

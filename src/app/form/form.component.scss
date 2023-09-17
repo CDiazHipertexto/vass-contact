@@ -1,0 +1,167 @@
+@import "./src/styles.scss";
+.form {
+  padding: 8rem 0;
+
+  form {
+    max-width: 800px;
+
+    .flex-box {
+      flex-direction: row;
+      gap: 5vw;
+    }
+
+    .item {
+      width: 100%;
+
+      &.cta {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+
+    .body--wrap {
+      width: 100%;
+      position: relative;
+      margin-bottom: 4.3rem;
+
+      &:focus {
+        border-left-color: 1px solid;
+        .focus-input2 {
+          top: -15px;
+          font-size: em(13px);
+        }
+      }
+
+      &.float-focus-2,
+      &.float-focus {
+        .focus-input2 {
+          top: -15px;
+          font-size: em(13px);
+        }
+      }
+
+      .focus-input23,
+      .focus-input2 {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 9px;
+        left: 0;
+        pointer-events: none;
+        color: white;
+        margin-bottom: 1.3rem;
+
+        @media all and (max-width: 991px) {
+          top: 13px;
+          left: 11px;
+          &.float:after {
+            top: -14px !important;
+            font-size: .75em !important;
+          }
+        }
+        &:after {
+          content: attr(data-placeholder);
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          line-height: 1.2;
+          -webkit-transition: all 0.4s;
+          -o-transition: all 0.4s;
+          -moz-transition: all 0.4s;
+          transition: all 0.4s;
+          font-size: 1em;
+          font-weight: 400;
+        }
+      }
+      .focus-input23 {
+        position: relative;
+        top: auto;
+        &:after {
+          position: relative;
+        }
+      }
+    }
+
+    textarea,
+    input {
+      width: 100%;
+      min-height: 40px;
+      display: block;
+      padding: 8px 40px 8px 8px;
+      border-radius: 0;
+      border: 0;
+      border-bottom: 1px solid #e8e8e8;
+      background: transparent;
+      font-size: 14px;
+      color: $white;
+      @media all and (max-width: 991px) {
+        font-size: .8em;
+      }
+    }
+
+    textarea {
+      border: 1px solid #e8e8e8;
+      border-radius: 5px;
+    }
+  }
+
+  .multiselect__tags {
+    border-radius: 0;
+  }
+  .multiselect__option--highlight:after {
+    background: #ff6a6adb !important;
+    content: "" !important;
+    color: #fff !important;
+    top: 0 !important;
+    right: 0 !important;
+    position: absolute !important;
+    line-height: 40px !important;
+    padding-right: 6px !important;
+    padding-left: 6px !important;
+    font-size: 9px !important;
+  }
+  .multiselect__option--selected:after {
+    content: "" !important;
+  }
+  .body--wrap.validate-input .multiselect__tags .multiselect__placeholder {
+    opacity: 0 !important;
+    position: absolute;
+  }
+  .body--wrap .multiselect .multiselect__single {
+    display: block !important;
+    @media all and (max-width: 991px) {
+      font-size: .8em;
+    }
+  }
+
+  .ui-message-error {
+    color: #F31835;
+    position: absolute;
+    left: 10px;
+    font-size: 0.85rem;
+    bottom: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    transition: .3s;
+    padding: 0 0 0;
+    @media all and (max-width: 991px) {
+      bottom: -9px;
+    }
+  }
+
+  .pr {
+    position: relative;
+  }
+
+  @include media($tablet) {
+    form {
+      .flex-box {
+        flex-direction: column;
+      }
+    }
+  }
+}

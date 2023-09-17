@@ -1,0 +1,94 @@
+ <footer id="footer" class="footer bg-dark">
+   <div class="footer--top">
+     <div class="container">
+       <div class="wrapper-cols">
+         <div class="col col-one">
+           <ul [ngClass]="{'s-hovered': isHovering, '': !isHovering}">
+             <li class="item"><a (mouseover)="isHovering=true" (mouseout)="isHovering=false" [ngClass]="{'hovering': isHovering, '': !isHovering}" aria-haspopup="true" aria-label="" href="#" class="link-hover">Complex</a></li>
+             <li class="item"><a (mouseover)="isHovering=true" (mouseout)="isHovering=false" [ngClass]="{'hovering': isHovering, '': !isHovering}" aria-haspopup="true" aria-label="" href="#" class="link-hover">Made</a></li>
+             <li class="item"><a (mouseover)="isHovering=true" (mouseout)="isHovering=false" [ngClass]="{'hovering': isHovering, '': !isHovering}" aria-haspopup="true" aria-label="" href="#" class="link-hover">Simple</a></li>
+           </ul>
+           <a class="logo" href="#">
+             <app-logo></app-logo>
+           </a>
+         </div>
+         <div class="col col-two">
+           <h3 class="title">Sitep Vass</h3>
+           <ul [ngClass]="{'s-hovered': isHovering, '': !isHovering}">
+             <li *ngFor="let itemMenu of itemsMenu" class="item">
+               <a (mouseover)="isHovering=true" (mouseout)="isHovering=false" [ngClass]="{'hovering': isHovering, '': !isHovering}" aria-haspopup="true" aria-label="" href="#" class="link-hover">{{itemMenu.item}}</a>
+             </li>
+           </ul>
+         </div>
+         <div class="col col-three">
+           <h3 class="title">Site Talento</h3>
+           <ul [ngClass]="{'s-hovered': isHovering, '': !isHovering}">
+             <li *ngFor="let itemMenu of itemsMenuTwo" class="item">
+               <a (mouseover)="isHovering=true" (mouseout)="isHovering=false" [ngClass]="{'hovering': isHovering, '': !isHovering}" aria-haspopup="true" aria-label="" href="#" class="link-hover">{{itemMenu.item}}</a>
+             </li>
+           </ul>
+         </div>
+         <div class="col col-four">
+           <h3 class="title">Empresas</h3>
+           <ul [ngClass]="{'s-hovered': isHovering, '': !isHovering}">
+             <li *ngFor="let itemMenu of itemsMenuThree" class="item">
+               <a (mouseover)="isHovering=true" (mouseout)="isHovering=false" [ngClass]="{'hovering': isHovering, '': !isHovering}" aria-haspopup="true" aria-label="" href="#" class="link-hover">{{itemMenu.item}}</a>
+             </li>
+           </ul>
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="footer--btm">
+    <div class="container">
+      <div class="flex-box">
+        <div class="legal">
+          <p class="">Copyright &copy; Todos los derechos reservados</p>
+        </div>
+        <div class="menu">
+          <nav class="tertiary-navigation">
+            <ul [ngClass]="{'s-hovered': isHovering, '': !isHovering}" class="tertiary-navigation__list">
+              <li class="item">
+                <a (mouseover)="isHovering=true" (mouseout)="isHovering=false" [ngClass]="{'hovering': isHovering, '': !isHovering}" aria-haspopup="true" aria-label="" href="#" class="link-hover">Política de cookies</a>
+              </li>
+              <li class="item">
+                <a (mouseover)="isHovering=true" (mouseout)="isHovering=false" [ngClass]="{'hovering': isHovering, '': !isHovering}" aria-haspopup="true" aria-label="" href="#" class="link-hover">Politica de privacidad</a>
+              </li>
+              <li class="item">
+                <a (mouseover)="isHovering=true" (mouseout)="isHovering=false" [ngClass]="{'hovering': isHovering, '': !isHovering}" aria-haspopup="true" aria-label="" href="#" class="link-hover">Política de calidad y medio ambiente</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="social">
+          <ul [ngClass]="{'s-hovered': isHovering, '': !isHovering}" class="list-social">
+            <li>
+              <a (mouseover)="isHovering=true" (mouseout)="isHovering=false" [ngClass]="{'hovering': isHovering, '': !isHovering}" aria-haspopup="true" aria-label="" href="#" class="">
+                <i class="fa-brands fa-twitter"></i>
+                <p>twitter</p>
+              </a>
+            </li>
+            <li>
+              <a (mouseover)="isHovering=true" (mouseout)="isHovering=false" [ngClass]="{'hovering': isHovering, '': !isHovering}" aria-haspopup="true" aria-label="" href="#" class="">
+                <i class="fa-brands fa-linkedin-in"></i>
+                <p>linkedin</p>
+              </a>
+            </li>
+            <li>
+              <a (mouseover)="isHovering=true" (mouseout)="isHovering=false" [ngClass]="{'hovering': isHovering, '': !isHovering}" aria-haspopup="true" aria-label="" href="#" class="">
+                <i class="fa-brands fa-instagram"></i>
+                <p>instagram</p>
+              </a>
+            </li>
+            <li>
+              <a (mouseover)="isHovering=true" (mouseout)="isHovering=false" [ngClass]="{'hovering': isHovering, '': !isHovering}" aria-haspopup="true" aria-label="" href="#" class="">
+                <i class="fa-brands fa-youtube"></i>
+                <p>youtube</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+   </div>
+</footer>

@@ -1,0 +1,24 @@
+<swiper
+  style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff"
+  [lazy]="true"
+  [loop]="true"
+  [grabCursor]="true"
+  [autoHeight]="true"
+  [autoplay]="{
+      delay: 2500,
+      disableOnInteraction: true
+    }"
+  [navigation]="true" class="mySwiper">
+  <ng-template swiperSlide>
+    <img class="swiper-lazy swiper-lazy-loaded" src="assets/images/hero-img-home-2.jpg">
+  </ng-template>
+  <ng-template swiperSlide>
+    <img class="swiper-lazy swiper-lazy-loaded" src="assets/images/hero-img-home.png">
+  </ng-template>
+  <ng-template swiperSlide>
+    <img class="swiper-lazy swiper-lazy-loaded" src="assets/images/hero-img-home-2.jpg">
+  </ng-template>
+  <span slot="wrapper-start">Wrapper Start</span>
+  <span slot="wrapper-end">Wrapper End</span>
+</swiper>
+

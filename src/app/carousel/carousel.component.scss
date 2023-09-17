@@ -1,0 +1,111 @@
+.dsc-carousel {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  &::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.48);
+    z-index: -2;
+  }
+  &__content {
+    text-align: center;
+    width: 100%;
+    align-self: stretch;
+    display: flex;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    &-item {
+      float: left;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      transition: 1s all ease-in;
+      h1 {
+        color: white;
+        font-weight: 900;
+        text-transform: uppercase;
+        z-index: 1;
+        span {
+          color: #FF8000;
+        }
+      }
+      p {
+        z-index: 1;
+        color: white;
+        font-weight: 500;
+        font-size: 20px;
+      }
+    }
+  }
+  &__btns {
+    position: absolute;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    bottom: 1em;
+    left: 1em;
+    width: 55px;
+    svg {
+      color: #EAEAEA;
+      width: 2.5rem;
+      height: 21px;
+    }
+    > i {
+      opacity: 0.7;
+      color: #fff;
+      font-size: 45px;
+      cursor: pointer;
+      justify-content: space-between;
+      position: relative;
+      background: #EAEAEA;
+      border-radius: 50px;
+      top: 0;
+      bottom: 0;
+      color: #848484 !important;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  &__steps {
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    color: #000;
+    border-radius: 0;
+    padding: 1px 10px;
+    font-size: 0.91em;
+    position: absolute;
+    top: 0.8em;
+    left: 0.5em;
+    z-index: 2;
+    &-step {
+      height: 8px;
+      width: 25px;
+      margin: 0 5px;
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      transition: 0.75s all ease-in-out;
+      &:hover,
+      &-active {
+        opacity: 0.7;
+        background: #fff;
+      }
+    }
+  }
+}

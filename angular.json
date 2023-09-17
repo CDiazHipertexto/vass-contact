@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "d9b5c187-c7db-4ef4-ba53-f7fccd020d3d"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -31,9 +34,15 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@fortawesome/fontawesome-free/css/all.css",
+              "./node_modules/swiper/swiper-bundle.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "./node_modules/@fortawesome/fontawesome-free/js/all.js",
+              "./node_modules/swiper/swiper-bundle.js"
+            ]
           },
           "configurations": {
             "production": {

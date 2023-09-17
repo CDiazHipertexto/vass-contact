@@ -1,0 +1,27 @@
+{
+  "itemsMenu": [
+    {
+      "item":  "Acerca de nosotros",
+      "subItems": [
+        {
+          "item": "Misión"
+        },
+        {
+          "item": "Visión"
+        }]
+    },
+    {
+      "item":  "Descarga tu Poliza",
+      "subItems": [
+        {
+          "item": "Item Descarga"
+        }]
+    },
+    {
+      "item":  "Términos y condiciones",
+      "subItems": [
+        {
+          "item": "Item TyC"
+        }]
+    }]
+}

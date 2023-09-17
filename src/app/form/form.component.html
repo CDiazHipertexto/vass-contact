@@ -1,0 +1,77 @@
+<section class="form bgDark">
+  <div class="container">
+    <div class="row">
+      <form action="" method="post" class="">
+        <div class="flex-box">
+          <div class="col">
+            <div class="item">
+              <div class="body--wrap validate-input" >
+                <input (keyup)="onKey($event)" (focus)="focusIn($event.target)" (blur)="focusOut($event.target)" required class="landing-cpa--input" type="text" autocomplete="off" />
+                <span class="focus-input2" data-placeholder="Nombre y Apellido:"></span>
+              </div>
+              <div class="ui-message-error" v-if="!mobileValid">
+                <p v-html="'Nombre y Apellido:'"></p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="body--wrap validate-input" >
+                <input (keyup)="onKey($event)" (focus)="focusIn($event.target)" (blur)="focusOut($event.target)" class="landing-cpa--input" type="email" autocomplete="off" />
+                <span class="focus-input2" data-placeholder="Email:"></span>
+              </div>
+              <div class="ui-message-error" v-if="!mobileValid">
+                <p v-html="'Email'"></p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="body--wrap validate-input" >
+                <input (keyup)="onKey($event)" (focus)="focusIn($event.target)" (blur)="focusOut($event.target)" class="landing-cpa--input" type="email" autocomplete="off" />
+                <span class="focus-input2" data-placeholder="Empresa / Organismo:"></span>
+              </div>
+              <div class="ui-message-error" v-if="!mobileValid">
+                <p v-html="'Empresa / Organismo'"></p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="body--wrap validate-input">
+                <ng-select [items]="typeCity"
+                           bindLabel="name"
+                           autofocus
+                           bindValue="id">
+
+                </ng-select>
+                <span class="focus-input2" data-placeholder="Pais"></span>
+              </div>
+              <div class="ui-message-error" v-if="!mobileValid">
+                <p v-html="'Pais'"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="item">
+              <div class="body--wrap validate-input" >
+                <input (keyup)="onKey($event)" (focus)="focusIn($event.target)" (blur)="focusOut($event.target)" required class="landing-cpa--input" type="number" autocomplete="off" />
+                <span class="focus-input2" data-placeholder="Teléfono:"></span>
+              </div>
+              <div class="ui-message-error" v-if="!mobileValid">
+                <p v-html="'Teléfono'"></p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="body--wrap validate-input" >
+                <span class="focus-input23" data-placeholder="Mensaje"></span>
+                <textarea id="textarea" name="message" class="" aria-labelledby="id_5_2609"></textarea>
+              </div>
+              <div class="ui-message-error" v-if="!mobileValid">
+                <p v-html="'Mensaje'"></p>
+              </div>
+            </div>
+            <div class="item cta">
+              <a href="" class="btn btn--green btn-primary">Enviar</a>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+

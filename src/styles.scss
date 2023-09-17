@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/scss/bootstrap';
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+
+//BASIC STYLES
+@import 'assets/base';
+@import 'assets/vendor/vendor';
+
+
+header.down, header.up {
+  .logo-vass {
+    max-width: 82px;
+
+    .st0{
+      fill: $primary_color !important;
+    }
+  }
+}
+
+.ng-select {
+  .ng-select-container {
+    width: 100%;
+    min-height: 40px;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid #e8e8e8;
+    background: transparent;
+    font-size: 14px;
+
+    .ng-value-label {
+      color: $white;
+    }
+  }
+
+}
+.ng-select-bottom ~ .focus-input2 {
+  top: -15px !important;
+  font-size: em(13px);
+}

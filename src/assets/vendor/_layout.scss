@@ -1,0 +1,47 @@
+/* LAYOUT
+*********************************************************** */
+.wrapper {
+  margin: 0 auto;
+  max-width: 1500px;
+  width: 100%;
+}
+
+.no-gutter {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.no-gutter-left {
+  padding-left: 0;
+}
+
+.no-gutter-right {
+  padding-right: 0;
+}
+
+.container {
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.container-full {
+	max-width: 1920px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.flex-box {
+  display: flex;
+  
+  @include media($tablet){
+    flex-direction: column;
+
+    &.align {
+      &-right,
+      &-left {
+        flex-direction: column;
+      }
+    }
+  }
+}
